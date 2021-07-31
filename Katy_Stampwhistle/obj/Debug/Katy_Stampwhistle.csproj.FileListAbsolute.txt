@@ -1,0 +1,10 @@
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\bin\Debug\Katy_Stampwhistle.exe.config
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\bin\Debug\Katy_Stampwhistle.exe
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\bin\Debug\Katy_Stampwhistle.pdb
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.csproj.AssemblyReference.cache
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.Form1.resources
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.Properties.Resources.resources
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.csproj.GenerateResource.cache
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.csproj.CoreCompileInputs.cache
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.exe
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.pdb
