@@ -30,8 +30,10 @@ namespace Katy_Stampwhistle
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.t_id = new System.Windows.Forms.TextBox();
+            this.l_password = new System.Windows.Forms.Label();
+            this.t_password = new System.Windows.Forms.TextBox();
             this.l_gmail = new System.Windows.Forms.Label();
+            this.t_id = new System.Windows.Forms.TextBox();
             this.l_userList = new System.Windows.Forms.ListBox();
             this.r_text = new System.Windows.Forms.RichTextBox();
             this.t_mailName = new System.Windows.Forms.TextBox();
@@ -40,27 +42,32 @@ namespace Katy_Stampwhistle
             this.l_subject = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.b_attach = new System.Windows.Forms.Button();
-            this.l_password = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.l_attachList = new System.Windows.Forms.ListBox();
             this.b_deleteAttach = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.b_send = new System.Windows.Forms.Button();
+            this.b_ready = new System.Windows.Forms.Button();
             this.t_addUser = new System.Windows.Forms.TextBox();
             this.b_addUser = new System.Windows.Forms.Button();
             this.b_deleteUser = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.b_clip = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.l_password);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.t_password);
             this.groupBox1.Controls.Add(this.l_gmail);
             this.groupBox1.Controls.Add(this.t_id);
             this.groupBox1.Location = new System.Drawing.Point(12, 18);
@@ -70,6 +77,31 @@ namespace Katy_Stampwhistle
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "전송자 정보";
             // 
+            // l_password
+            // 
+            this.l_password.AutoSize = true;
+            this.l_password.Location = new System.Drawing.Point(5, 57);
+            this.l_password.Name = "l_password";
+            this.l_password.Size = new System.Drawing.Size(81, 12);
+            this.l_password.TabIndex = 8;
+            this.l_password.Text = "구글 비밀번호";
+            // 
+            // t_password
+            // 
+            this.t_password.Location = new System.Drawing.Point(5, 72);
+            this.t_password.Name = "t_password";
+            this.t_password.Size = new System.Drawing.Size(102, 21);
+            this.t_password.TabIndex = 7;
+            // 
+            // l_gmail
+            // 
+            this.l_gmail.Font = new System.Drawing.Font("굴림", 11F);
+            this.l_gmail.Location = new System.Drawing.Point(113, 24);
+            this.l_gmail.Name = "l_gmail";
+            this.l_gmail.Size = new System.Drawing.Size(87, 18);
+            this.l_gmail.TabIndex = 1;
+            this.l_gmail.Text = "@gmail.com";
+            // 
             // t_id
             // 
             this.t_id.Location = new System.Drawing.Point(7, 21);
@@ -77,43 +109,34 @@ namespace Katy_Stampwhistle
             this.t_id.Size = new System.Drawing.Size(100, 21);
             this.t_id.TabIndex = 0;
             // 
-            // l_gmail
-            // 
-            this.l_gmail.Font = new System.Drawing.Font("굴림", 11F);
-            this.l_gmail.Location = new System.Drawing.Point(113, 24);
-            this.l_gmail.Name = "l_gmail";
-            this.l_gmail.Size = new System.Drawing.Size(100, 18);
-            this.l_gmail.TabIndex = 1;
-            this.l_gmail.Text = "@gmail.com";
-            // 
             // l_userList
             // 
             this.l_userList.FormattingEnabled = true;
             this.l_userList.ItemHeight = 12;
-            this.l_userList.Location = new System.Drawing.Point(224, 33);
+            this.l_userList.Location = new System.Drawing.Point(6, 20);
             this.l_userList.Name = "l_userList";
-            this.l_userList.Size = new System.Drawing.Size(174, 256);
+            this.l_userList.Size = new System.Drawing.Size(219, 304);
             this.l_userList.TabIndex = 1;
             // 
             // r_text
             // 
-            this.r_text.Location = new System.Drawing.Point(404, 33);
+            this.r_text.Location = new System.Drawing.Point(6, 20);
             this.r_text.Name = "r_text";
-            this.r_text.Size = new System.Drawing.Size(465, 256);
+            this.r_text.Size = new System.Drawing.Size(388, 304);
             this.r_text.TabIndex = 2;
             this.r_text.Text = "";
             // 
             // t_mailName
             // 
-            this.t_mailName.Location = new System.Drawing.Point(12, 145);
+            this.t_mailName.Location = new System.Drawing.Point(6, 35);
             this.t_mailName.Name = "t_mailName";
-            this.t_mailName.Size = new System.Drawing.Size(206, 21);
+            this.t_mailName.Size = new System.Drawing.Size(194, 21);
             this.t_mailName.TabIndex = 2;
             // 
             // l_mailName
             // 
             this.l_mailName.AutoSize = true;
-            this.l_mailName.Location = new System.Drawing.Point(12, 130);
+            this.l_mailName.Location = new System.Drawing.Point(6, 20);
             this.l_mailName.Name = "l_mailName";
             this.l_mailName.Size = new System.Drawing.Size(57, 12);
             this.l_mailName.TabIndex = 3;
@@ -121,15 +144,15 @@ namespace Katy_Stampwhistle
             // 
             // t_subject
             // 
-            this.t_subject.Location = new System.Drawing.Point(12, 187);
+            this.t_subject.Location = new System.Drawing.Point(6, 80);
             this.t_subject.Name = "t_subject";
-            this.t_subject.Size = new System.Drawing.Size(206, 21);
+            this.t_subject.Size = new System.Drawing.Size(194, 21);
             this.t_subject.TabIndex = 4;
             // 
             // l_subject
             // 
             this.l_subject.AutoSize = true;
-            this.l_subject.Location = new System.Drawing.Point(13, 172);
+            this.l_subject.Location = new System.Drawing.Point(7, 65);
             this.l_subject.Name = "l_subject";
             this.l_subject.Size = new System.Drawing.Size(29, 12);
             this.l_subject.TabIndex = 5;
@@ -151,22 +174,6 @@ namespace Katy_Stampwhistle
             this.b_attach.UseVisualStyleBackColor = true;
             this.b_attach.Click += new System.EventHandler(this.b_attach_Click);
             // 
-            // l_password
-            // 
-            this.l_password.AutoSize = true;
-            this.l_password.Location = new System.Drawing.Point(5, 57);
-            this.l_password.Name = "l_password";
-            this.l_password.Size = new System.Drawing.Size(81, 12);
-            this.l_password.TabIndex = 8;
-            this.l_password.Text = "구글 비밀번호";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(5, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 21);
-            this.textBox1.TabIndex = 7;
-            // 
             // l_attachList
             // 
             this.l_attachList.FormattingEnabled = true;
@@ -184,59 +191,54 @@ namespace Katy_Stampwhistle
             this.b_deleteAttach.TabIndex = 9;
             this.b_deleteAttach.Text = "선택 첨부 취소";
             this.b_deleteAttach.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(740, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 51);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "전송!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.b_deleteAttach.Click += new System.EventHandler(this.b_deleteAttach_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.b_send);
+            this.groupBox2.Controls.Add(this.b_ready);
             this.groupBox2.Controls.Add(this.l_attachList);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.b_attach);
             this.groupBox2.Controls.Add(this.b_deleteAttach);
-            this.groupBox2.Location = new System.Drawing.Point(12, 299);
+            this.groupBox2.Location = new System.Drawing.Point(12, 361);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(857, 147);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "파일 첨부, 전송";
             // 
-            // label1
+            // b_send
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(402, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "내용";
+            this.b_send.Enabled = false;
+            this.b_send.Location = new System.Drawing.Point(739, 108);
+            this.b_send.Name = "b_send";
+            this.b_send.Size = new System.Drawing.Size(105, 23);
+            this.b_send.TabIndex = 11;
+            this.b_send.Text = "전송!";
+            this.b_send.UseVisualStyleBackColor = true;
+            this.b_send.Click += new System.EventHandler(this.b_send_Click);
             // 
-            // label2
+            // b_ready
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 12);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "받을 사람 목록";
+            this.b_ready.Location = new System.Drawing.Point(739, 79);
+            this.b_ready.Name = "b_ready";
+            this.b_ready.Size = new System.Drawing.Size(105, 23);
+            this.b_ready.TabIndex = 10;
+            this.b_ready.Text = "전송 준비";
+            this.b_ready.UseVisualStyleBackColor = true;
+            this.b_ready.Click += new System.EventHandler(this.b_ready_Click);
             // 
             // t_addUser
             // 
-            this.t_addUser.Location = new System.Drawing.Point(12, 224);
+            this.t_addUser.Location = new System.Drawing.Point(5, 19);
             this.t_addUser.Name = "t_addUser";
-            this.t_addUser.Size = new System.Drawing.Size(100, 21);
+            this.t_addUser.Size = new System.Drawing.Size(195, 21);
             this.t_addUser.TabIndex = 14;
             // 
             // b_addUser
             // 
-            this.b_addUser.Location = new System.Drawing.Point(34, 252);
+            this.b_addUser.Location = new System.Drawing.Point(5, 46);
             this.b_addUser.Name = "b_addUser";
-            this.b_addUser.Size = new System.Drawing.Size(75, 23);
+            this.b_addUser.Size = new System.Drawing.Size(96, 23);
             this.b_addUser.TabIndex = 15;
             this.b_addUser.Text = "수동 추가";
             this.b_addUser.UseVisualStyleBackColor = true;
@@ -244,52 +246,95 @@ namespace Katy_Stampwhistle
             // 
             // b_deleteUser
             // 
-            this.b_deleteUser.Location = new System.Drawing.Point(128, 252);
+            this.b_deleteUser.Location = new System.Drawing.Point(104, 46);
             this.b_deleteUser.Name = "b_deleteUser";
-            this.b_deleteUser.Size = new System.Drawing.Size(75, 23);
+            this.b_deleteUser.Size = new System.Drawing.Size(96, 23);
             this.b_deleteUser.TabIndex = 16;
-            this.b_deleteUser.Text = "대상 삭제";
+            this.b_deleteUser.Text = "선택 삭제";
             this.b_deleteUser.UseVisualStyleBackColor = true;
             this.b_deleteUser.Click += new System.EventHandler(this.b_deleteUser_Click);
             // 
             // b_clip
             // 
-            this.b_clip.Location = new System.Drawing.Point(404, 470);
+            this.b_clip.Location = new System.Drawing.Point(5, 75);
             this.b_clip.Name = "b_clip";
-            this.b_clip.Size = new System.Drawing.Size(75, 23);
+            this.b_clip.Size = new System.Drawing.Size(194, 23);
             this.b_clip.TabIndex = 17;
-            this.b_clip.Text = "복사목록 추가";
+            this.b_clip.Text = "복사된 목록 복사";
             this.b_clip.UseVisualStyleBackColor = true;
             this.b_clip.Click += new System.EventHandler(this.b_clip_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.t_addUser);
+            this.groupBox3.Controls.Add(this.b_clip);
+            this.groupBox3.Controls.Add(this.b_addUser);
+            this.groupBox3.Controls.Add(this.b_deleteUser);
+            this.groupBox3.Location = new System.Drawing.Point(12, 248);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(206, 107);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "수신자 목록 관리";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.t_mailName);
+            this.groupBox4.Controls.Add(this.l_mailName);
+            this.groupBox4.Controls.Add(this.t_subject);
+            this.groupBox4.Controls.Add(this.l_subject);
+            this.groupBox4.Location = new System.Drawing.Point(12, 128);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(206, 114);
+            this.groupBox4.TabIndex = 19;
+            this.groupBox4.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.l_userList);
+            this.groupBox5.Location = new System.Drawing.Point(225, 18);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(231, 337);
+            this.groupBox5.TabIndex = 20;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "수신자 목록";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.r_text);
+            this.groupBox6.Location = new System.Drawing.Point(462, 18);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(407, 337);
+            this.groupBox6.TabIndex = 21;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "본문";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 584);
-            this.Controls.Add(this.b_clip);
-            this.Controls.Add(this.b_deleteUser);
-            this.Controls.Add(this.b_addUser);
-            this.Controls.Add(this.t_addUser);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(884, 519);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.r_text);
-            this.Controls.Add(this.l_subject);
-            this.Controls.Add(this.l_userList);
-            this.Controls.Add(this.t_subject);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.l_mailName);
-            this.Controls.Add(this.t_mailName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "케이티 스탬프휘슬 : 이메일 전송기";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -297,7 +342,7 @@ namespace Katy_Stampwhistle
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label l_password;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox t_password;
         private System.Windows.Forms.Button b_attach;
         private System.Windows.Forms.Label l_subject;
         private System.Windows.Forms.TextBox t_subject;
@@ -310,15 +355,18 @@ namespace Katy_Stampwhistle
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ListBox l_attachList;
         private System.Windows.Forms.Button b_deleteAttach;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox t_addUser;
         private System.Windows.Forms.Button b_addUser;
         private System.Windows.Forms.Button b_deleteUser;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button b_clip;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button b_send;
+        private System.Windows.Forms.Button b_ready;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
 
