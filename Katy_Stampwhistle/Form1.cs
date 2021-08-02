@@ -35,24 +35,39 @@ namespace Katy_Stampwhistle
 
         private void b_addUser_Click(object sender, EventArgs e)
         {
+            if(t_addUser.Text == "")
+            {
+                MessageBox.Show("이메일을 입력해주세요!", "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             l_userList.Items.Add(t_addUser.Text);
             t_addUser.Text = "";
         }
 
         private void b_deleteUser_Click(object sender, EventArgs e)
         {
+            if(l_userList.SelectedIndex == -1)
+            {
+                MessageBox.Show("삭제할 수신자를 먼저 선택하세요!", "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             var selectIndex = l_userList.SelectedIndex;
             l_userList.Items.RemoveAt(selectIndex);
         }
 
         private void b_clip_Click(object sender, EventArgs e)
         {
+            if(Clipboard.GetText() == null)
+            {
+                MessageBox.Show("복사된게 없는거 같은데요!", "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             string set = Clipboard.GetText();
             char cheak;
             int start = 0;
             string combine = "";
 
-            for (int index = 0; index < set.Length - 2; index++)
+            for (int index = 0; index < set.Length; index++)
             {
                 cheak = set[index];
                 if (cheak.ToString() == "\n")
@@ -66,7 +81,6 @@ namespace Katy_Stampwhistle
                 }
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -80,31 +94,57 @@ namespace Katy_Stampwhistle
 
         private void b_send_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            wait w8 = new wait();
+            w8.Show();
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 587;
             smtpServer.Credentials = new System.Net.NetworkCredential(t_id.Text, t_password.Text);
             smtpServer.EnableSsl = true;
-
-            for (int index = 0; index < l_attachList.Items.Count; index++)
+            try
             {
-                mail.Attachments.Add(new Attachment(l_attachList.Items.IndexOf(index).ToString()));
+                for (int index = 0; index < l_attachList.Items.Count; index++)
+                {
+                    Attachment attach = new Attachment(l_attachList.Items[index].ToString());
+                    mail.Attachments.Add(attach);
+                }
             }
-            for(int index = 0; index < l_userList.Items.Count; index++)
+            catch(Exception ex)
             {
-                mail.To.Add(l_userList.Items.IndexOf(index).ToString());
-                smtpServer.Send(mail);
-                mail.To.Clear();
+                MessageBox.Show("파일 첨부에 문제가 있어요. 경로에 파일이 있나요?\n\n" + ex, "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            try
+            {
+                for(int index = 0; index < l_userList.Items.Count; index++)
+                {
+                    mail.To.Add(l_userList.Items[index].ToString());
+                    smtpServer.Send(mail);
+                    mail.To.Clear();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("수신자를 추가하는 도중, 아니면 이메일 전송 중에 문제가 생겼어요.\n 수신자 이메일을 확인해볼래요? 아니면 인터넷을 확인해봐요.\n구글 계정 설정은 하셨나요?\n\n" + ex, "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
             }
             mail.To.Clear();
             mail.Attachments.Clear();
+            this.Cursor = Cursors.Default;
+            w8.Close();
             MessageBox.Show("전송 완료!");
         }
 
         private void b_ready_Click(object sender, EventArgs e)
         {
+            if(t_id.Text == "" || t_password.Text == "" || t_mailName.Text == "" || t_subject.Text == "")
+            {
+                MessageBox.Show("정말 준비된거 맞아요?", "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             if(b_ready.Text.ToString() == "전송 준비")
             {
-                b_ready.Text = "준비 완료!";
+                b_ready.Text = "수정";
                 t_id.Enabled = false;
                 t_password.Enabled = false;
                 t_mailName.Enabled = false;

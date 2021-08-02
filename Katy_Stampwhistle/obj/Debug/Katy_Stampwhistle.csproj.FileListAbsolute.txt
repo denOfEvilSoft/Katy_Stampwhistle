@@ -8,3 +8,4 @@ C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Ka
 C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.csproj.CoreCompileInputs.cache
 C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.exe
 C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.pdb
+C:\Users\GGWP\Desktop\C#\non_db\Katy_Stampwhistle\Katy_Stampwhistle\obj\Debug\Katy_Stampwhistle.wait.resources
