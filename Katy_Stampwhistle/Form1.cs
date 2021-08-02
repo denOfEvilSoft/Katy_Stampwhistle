@@ -67,13 +67,19 @@ namespace Katy_Stampwhistle
             int start = 0;
             string combine = "";
 
+            bool firstLine = false;
+
             for (int index = 0; index < set.Length; index++)
             {
                 cheak = set[index];
-                if (cheak.ToString() == "\n")
+                if (cheak.ToString() == "\n" || index == set.Length - 1)
                 {
-                    for (; start < index - 1; start++)
+                    for (; start <= index; start++)
                     {
+                        if(firstLine == false)
+                        {
+                            firstLine = true;
+                        }
                         combine += set[start];
                     }
                     l_userList.Items.Add(combine);
@@ -125,7 +131,11 @@ namespace Katy_Stampwhistle
             }
             catch(Exception ex)
             {
-                MessageBox.Show("수신자를 추가하는 도중, 아니면 이메일 전송 중에 문제가 생겼어요.\n 수신자 이메일을 확인해볼래요? 아니면 인터넷을 확인해봐요.\n구글 계정 설정은 하셨나요?\n\n" + ex, "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("수신자를 추가하는 도중, 아니면 이메일 전송 중에 문제가 생겼어요.\n수신자 이메일을 확인해볼래요?\n아니면 인터넷을 확인해봐요.\n구글 계정 설정은 하셨나요?\n비밀번호나 아이디가 틀렸을 수도 있어요!", "케이티 스탬프휘슬 : 이메일 전송기", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                w8.Close();
+                this.Cursor = Cursors.Default;
+                mail.To.Clear();
+                mail.Attachments.Clear();
                 return;
             }
             mail.To.Clear();
@@ -167,6 +177,9 @@ namespace Katy_Stampwhistle
                 mail.From = new MailAddress(t_id.Text + "@gmail.com", t_mailName.Text, System.Text.Encoding.UTF8);
                 mail.Subject = t_subject.Text.ToString();
                 mail.Body = r_text.Text;
+
+                mail.SubjectEncoding = System.Text.Encoding.UTF8;
+                mail.BodyEncoding = System.Text.Encoding.UTF8;
             }
             else
             {
@@ -190,6 +203,23 @@ namespace Katy_Stampwhistle
 
                 b_send.Enabled = false;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            exit qui8 = new exit();
+            qui8.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Help hp = new Help();
+            hp.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
