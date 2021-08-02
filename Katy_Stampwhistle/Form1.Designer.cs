@@ -58,11 +58,12 @@ namespace Katy_Stampwhistle
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -266,14 +267,15 @@ namespace Katy_Stampwhistle
             // 
             this.b_clip.Location = new System.Drawing.Point(5, 75);
             this.b_clip.Name = "b_clip";
-            this.b_clip.Size = new System.Drawing.Size(194, 23);
+            this.b_clip.Size = new System.Drawing.Size(96, 23);
             this.b_clip.TabIndex = 17;
-            this.b_clip.Text = "복사된 목록 복사";
+            this.b_clip.Text = "복사된 목록";
             this.b_clip.UseVisualStyleBackColor = true;
             this.b_clip.Click += new System.EventHandler(this.b_clip_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.t_addUser);
             this.groupBox3.Controls.Add(this.b_clip);
             this.groupBox3.Controls.Add(this.b_addUser);
@@ -329,6 +331,44 @@ namespace Katy_Stampwhistle
             this.panel1.Size = new System.Drawing.Size(896, 31);
             this.panel1.TabIndex = 22;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(838, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 15);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "_";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(253, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(239, 12);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "제작자 이메일 : denofevil.soft@gmail.com";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(860, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -351,43 +391,15 @@ namespace Katy_Stampwhistle
             this.label2.Text = "이 프로그램을 처음 써본다면 날 눌러요!";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // button1
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(860, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(253, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "제작자 이메일 : denofevil.soft@gmail.com";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(838, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "_";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.button1.Location = new System.Drawing.Point(104, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "목록 초기화";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -461,6 +473,7 @@ namespace Katy_Stampwhistle
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }
 

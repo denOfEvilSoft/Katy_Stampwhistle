@@ -34,9 +34,11 @@ namespace Katy_Stampwhistle
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@ namespace Katy_Stampwhistle
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 90);
+            this.label2.Location = new System.Drawing.Point(12, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(501, 24);
             this.label2.TabIndex = 1;
@@ -63,7 +65,7 @@ namespace Katy_Stampwhistle
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 135);
+            this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(457, 12);
             this.label3.TabIndex = 2;
@@ -92,18 +94,6 @@ namespace Katy_Stampwhistle
             this.panel1.Size = new System.Drawing.Size(578, 31);
             this.panel1.TabIndex = 23;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(860, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "X";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -117,21 +107,53 @@ namespace Katy_Stampwhistle
             this.label6.Text = "X";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(860, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "X";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 166);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 268);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(109, 12);
             this.linkLabel1.TabIndex = 24;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "사진을 포함한 설명";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(389, 24);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "메일을 보내시고 전송자 이메일을 확인하세요\r\n이메일 주소가 틀려, 전송이 실패했다면 당신의 이메일로 알림이 갑니다";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(531, 12);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "본인 denofevil.soft@gmail.com 은 이 프로그램 사용으로 생긴 모든 문제의 책임을 지지 않습니다";
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 199);
+            this.ClientSize = new System.Drawing.Size(575, 289);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -159,5 +181,7 @@ namespace Katy_Stampwhistle
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

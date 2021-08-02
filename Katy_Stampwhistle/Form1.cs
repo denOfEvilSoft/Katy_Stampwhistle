@@ -221,5 +221,10 @@ namespace Katy_Stampwhistle
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            l_userList.Items.Clear();
+        }
     }
 }
