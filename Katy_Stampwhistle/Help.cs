@@ -21,5 +21,16 @@ namespace Katy_Stampwhistle
         {
             this.Close();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("https://denofevil.tistory.com/4");
+            }catch(Exception ex)
+            {
+                MessageBox.Show("링크 이동중 문제 발생!", "" ,MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
     }
 }
